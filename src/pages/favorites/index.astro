@@ -1,0 +1,17 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+
+import NavBar from "../../components/NavBar.astro";
+import PageTitle from "../../components/PageTitle.astro";
+import { BuildFavoriteList } from "../../components/BuildFavoriteList";
+---
+
+<MainLayout title="Mis Favoritos">
+  <NavBar />
+
+  <PageTitle title="Mis Favoritos" />
+
+  <section aria-label="Listado de Pokemons" class="mt-4 grid grid-cols-2 gap-4 md:grid-cols-2 lg:grid-cols-4">
+    <BuildFavoriteList client:only="solid-js" />
+  </section>
+</MainLayout>
